@@ -1,0 +1,37 @@
+- model_class = FinancialRequest
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:name) + ':'
+  %br
+  = @financial_request.name
+%p
+  %strong= model_class.human_attribute_name(:applicant) + ':'
+  %br
+  = @financial_request.applicant
+%p
+  %strong= model_class.human_attribute_name(:requested_sum) + ':'
+  %br
+  = @financial_request.requested_sum
+%p
+  %strong= model_class.human_attribute_name(:date) + ':'
+  %br
+  = @financial_request.date
+%p
+  %strong= model_class.human_attribute_name(:done) + ':'
+  %br
+  = @financial_request.done
+%p
+  %strong= model_class.human_attribute_name(:agenda_item) + ':'
+  %br
+  = @financial_request.agenda_item
+%p
+  %strong= model_class.human_attribute_name(:meeting_id) + ':'
+  %br
+  = @financial_request.meeting_id
+
+
+= link_to t('.back', :default => t("helpers.links.back")), financial_requests_path, :class => 'btn btn-default'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_financial_request_path(@financial_request), :class => 'btn btn-default'
+= link_to t('.destroy', :default => t("helpers.links.destroy")), financial_request_path(@financial_request), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

@@ -1,0 +1,15 @@
+= form_for @meeting, html: { class: "form form-horizontal meeting" } do |f|
+  .form-group
+    = f.label :date, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :date, class: 'form-control', required: true
+    = f.error_span(:date)
+  .form-group
+    = f.label :budget_year_id, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :budget_year_id, class: 'form-control', required: true
+    = f.error_span(:budget_year_id)
+  .form-group
+    .col-lg-offset-2.col-lg-10
+      = f.submit nil,class: 'btn btn-primary'
+      = link_to t('.cancel', :default => t("helpers.links.cancel")), meetings_path, :class => 'btn btn-default'

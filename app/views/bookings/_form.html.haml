@@ -1,0 +1,30 @@
+= form_for @booking, html: { class: "form form-horizontal booking" } do |f|
+  .form-group
+    = f.label :amount, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :amount, class: 'form-control', required: true
+    = f.error_span(:amount)
+  .form-group
+    = f.label :comment, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :comment, class: 'form-control', required: true
+    = f.error_span(:comment)
+  .form-group
+    = f.label :date, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :date, class: 'form-control', required: true
+    = f.error_span(:date)
+  .form-group
+    = f.label :budget_year_id, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :budget_year_id, class: 'form-control', required: true
+    = f.error_span(:budget_year_id)
+  .form-group
+    = f.label :financial_request_id, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :financial_request_id, class: 'form-control', required: true
+    = f.error_span(:financial_request_id)
+  .form-group
+    .col-lg-offset-2.col-lg-10
+      = f.submit nil,class: 'btn btn-primary'
+      = link_to t('.cancel', :default => t("helpers.links.cancel")), bookings_path, :class => 'btn btn-default'

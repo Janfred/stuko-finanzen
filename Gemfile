@@ -70,3 +70,5 @@ gem 'haml-rails'
 gem 'omniauth-shibboleth'
 
 gem 'twitter-bootstrap-rails'
+
+gem 'money-rails'

@@ -3,7 +3,7 @@ class CreateFinancialRequests < ActiveRecord::Migration[5.0]
     create_table :financial_requests do |t|
       t.string :name
       t.string :applicant
-      t.integer :requested_sum
+      t.integer :requested_sum_cents
       t.date :date
       t.boolean :done
       t.string :agenda_item

@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20171209111419) do
 
   create_table "bookings", force: :cascade do |t|
-    t.integer  "amount"
+    t.integer  "amount_cents"
     t.string   "comment"
     t.date     "date"
     t.integer  "budget_year_id"
@@ -26,22 +26,22 @@ ActiveRecord::Schema.define(version: 20171209111419) do
 
   create_table "budget_years", force: :cascade do |t|
     t.string   "name"
-    t.integer  "budget"
-    t.integer  "additional_budget"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.integer  "budget_cents"
+    t.integer  "additional_budget_cents"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "financial_requests", force: :cascade do |t|
     t.string   "name"
     t.string   "applicant"
-    t.integer  "requested_sum"
+    t.integer  "requested_sum_cents"
     t.date     "date"
     t.boolean  "done"
     t.string   "agenda_item"
     t.integer  "meeting_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.index ["meeting_id"], name: "index_financial_requests_on_meeting_id"
   end
 

@@ -32,10 +32,10 @@ class BudgetYearsController < ApplicationController
   def update
     respond_to do |format|
       if @budget_year.update(budget_year_params)
-        format.html { redirect_to @budget_year, notice: 'Budget year was successfully created.' }
-        format.json { render :show, status: :created, location: @budget_year }
+        format.html { redirect_to @budget_year, notice: 'Budget year was successfully updated.' }
+        format.json { render :show, status: :updated, location: @budget_year }
       else
-        format.html { render :new }
+        format.html { render :edit }
         format.json { render json: @budget_year.errors, status: :unprocessable_entity }
       end
     end

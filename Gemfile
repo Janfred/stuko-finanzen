@@ -68,3 +68,5 @@ gem 'devise-i18n'
 gem 'haml-rails'
 
 gem 'omniauth-shibboleth'
+
+gem 'twitter-bootstrap-rails'

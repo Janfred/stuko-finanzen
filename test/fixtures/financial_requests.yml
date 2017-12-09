@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  applicant: MyString
+  requested_sum: 1
+  date: 2017-12-09
+  done: false
+  agenda_item: MyString
+
+two:
+  name: MyString
+  applicant: MyString
+  requested_sum: 1
+  date: 2017-12-09
+  done: false
+  agenda_item: MyString

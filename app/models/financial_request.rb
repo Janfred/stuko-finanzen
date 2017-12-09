@@ -1,0 +1,2 @@
+class FinancialRequest < ApplicationRecord
+end

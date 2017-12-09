@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  comment: MyString
+  date: 2017-12-09
+  budget_year: one
+  financial_request: one
+
+two:
+  amount: 1
+  comment: MyString
+  date: 2017-12-09
+  budget_year: two
+  financial_request: two

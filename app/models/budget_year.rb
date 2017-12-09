@@ -1,0 +1,2 @@
+class BudgetYear < ApplicationRecord
+end

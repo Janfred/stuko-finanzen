@@ -31,7 +31,7 @@ class FinancialRequestsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @financial_request.update(update_params)
+      if @financial_request.update(financial_request_params)
         format.html { redirect_to @financial_request, notice: 'Financial Request was successfully updated.' }
         format.json { render :show, status: :updated, location: @financial_request }
       else
@@ -42,9 +42,9 @@ class FinancialRequestsController < ApplicationController
   end
 
   def destroy
-    @booking.destroy
+    @financial_request.destroy
     respond_to do |format|
-      format.html { redirect_to financial_request_url, notice: 'Financial Request was successfully destroyed' }
+      format.html { redirect_to financial_requests_url, notice: 'Financial Request was successfully destroyed' }
       format.json { head :no_content }
     end
   end

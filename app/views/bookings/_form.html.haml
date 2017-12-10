@@ -17,12 +17,12 @@
   .form-group
     = f.label :budget_year_id, class: 'control-label col-lg-2'
     .col-lg-10
-      = f.text_field :budget_year_id, class: 'form-control', required: true
+      = f.select :budget_year_id, options_for_select(BudgetYear.all.map{|b| [b.name, b.id]}, @booking.budget_year_id), class: 'form-control', required: true
     = f.error_span(:budget_year_id)
   .form-group
     = f.label :financial_request_id, class: 'control-label col-lg-2'
     .col-lg-10
-      = f.select :financial_request_id, options_for_select(FinancialRequest.all.map{|f|[f.name + " " + f.applicant, f.id]}), class: 'form-control'
+      = f.select :financial_request_id, options_for_select(FinancialRequest.all.map{|f|[f.name + " " + f.applicant, f.id]}, @booking.financial_request_id), class: 'form-control', include_blank: true
     = f.error_span(:financial_request_id)
   .form-group
     .col-lg-offset-2.col-lg-10

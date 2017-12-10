@@ -8,6 +8,8 @@
       %th= model_class.human_attribute_name(:name)
       %th= model_class.human_attribute_name(:budget)
       %th= model_class.human_attribute_name(:additional_budget)
+      %th= model_class.human_attribute_name(:called_budget)
+      %th= model_class.human_attribute_name(:remaining_budget)
       %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
@@ -17,6 +19,8 @@
         %td= budget_year.name
         %td= budget_year.budget
         %td= budget_year.additional_budget
+        %td= budget_year.called_budget
+        %td= budget_year.remaining_budget
         %td=l budget_year.created_at
         %td
           = link_to t('.show', :default => t("helpers.links.show")), budget_year_path(budget_year), :class => 'btn btn-default btn-xs'

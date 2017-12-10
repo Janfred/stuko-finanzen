@@ -14,7 +14,7 @@
       %tr
         %td= link_to meeting.id, meeting_path(meeting)
         %td= meeting.date
-        %td= meeting.budget_year_id
+        %td= (meeting.budget_year ? meeting.budget_year.name : "-")
         %td=l meeting.created_at
         %td
           = link_to t('.show', :default => t("helpers.links.show")), meeting_path(meeting), :class => 'btn btn-default btn-xs'

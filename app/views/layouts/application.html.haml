@@ -28,23 +28,15 @@
         %a.navbar-brand(href="#") StukoFinanzen
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
-            %li= link_to "Link 1", "/path1"
-            %li= link_to "Link 2", "/path2"
-            %li= link_to "Link 3", "/path3"
-            %li= link_to "Link 3", "/path3"
+            %li= link_to "Budget years", budget_years_path
+            %li= link_to "Meetings", meetings_path
+            %li= link_to "Financial Requests", financial_requests_path
+            %li= link_to "Bookings", bookings_path
 
     .container
       .row
-        .col-lg-9
+        .col-lg-12
           = bootstrap_flash
           = yield
-        .col-lg-3
-          .well.sidebar-nav
-            %h3 Sidebar
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
       %footer
-        %p &copy; Company 2017
+        %p &copy; Jan-Frederik Rieckers 2017

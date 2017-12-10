@@ -8,6 +8,8 @@
       %th= model_class.human_attribute_name(:name)
       %th= model_class.human_attribute_name(:applicant)
       %th= model_class.human_attribute_name(:requested_sum)
+      %th= model_class.human_attribute_name(:called_sum)
+      %th= model_class.human_attribute_name(:open_sum)
       %th= model_class.human_attribute_name(:date)
       %th= model_class.human_attribute_name(:done)
       %th= model_class.human_attribute_name(:agenda_item)
@@ -21,10 +23,12 @@
         %td= financial_request.name
         %td= financial_request.applicant
         %td= financial_request.requested_sum
+        %td= financial_request.called_sum
+        %td= financial_request.open_sum
         %td= financial_request.date
         %td= financial_request.done
         %td= financial_request.agenda_item
-        %td= financial_request.meeting_id
+        %td= ( financial_request.meeting ? financial_request.meeting.date : "-" )
         %td=l financial_request.created_at
         %td
           = link_to t('.show', :default => t("helpers.links.show")), financial_request_path(financial_request), :class => 'btn btn-default btn-xs'

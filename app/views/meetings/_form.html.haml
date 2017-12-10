@@ -7,7 +7,7 @@
   .form-group
     = f.label :budget_year_id, class: 'control-label col-lg-2'
     .col-lg-10
-      = f.text_field :budget_year_id, class: 'form-control', required: true
+      = f.select :budget_year_id, options_for_select(BudgetYear.all.map{|m| [m.name, m.id]}), class: 'form-control', required: true
     = f.error_span(:budget_year_id)
   .form-group
     .col-lg-offset-2.col-lg-10

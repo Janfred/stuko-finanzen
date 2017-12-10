@@ -19,8 +19,8 @@
         %td= booking.amount
         %td= booking.comment
         %td= booking.date
-        %td= booking.budget_year_id
-        %td= booking.financial_request_id
+        %td= (booking.budget_year ? booking.budget_year.name : "-")
+        %td= (booking.financial_request ? booking.financial_request.name+" ("+booking.financial_request.applicant+")" : "-" )
         %td=l booking.created_at
         %td
           = link_to t('.show', :default => t("helpers.links.show")), booking_path(booking), :class => 'btn btn-default btn-xs'

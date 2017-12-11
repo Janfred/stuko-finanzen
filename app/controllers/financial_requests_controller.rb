@@ -18,35 +18,24 @@ class FinancialRequestsController < ApplicationController
   def create
     @financial_request = FinancialRequest.new(financial_request_params)
 
-    respond_to do |format|
-      if @financial_request.save
-        format.html { redirect_to @financial_request, notice: 'Financial Request was successfully created.' }
-        format.json { render :show, status: :created, location: @financial_request }
-      else
-        format.html { render :new }
-        format.json { render json: @financial_request.errors, status: :unprocessable_entity }
-      end
+    if @financial_request.save
+      redirect_to @financial_request, notice: 'Financial Request was successfully created.'
+    else
+      render :new
     end
   end
 
   def update
-    respond_to do |format|
-      if @financial_request.update(financial_request_params)
-        format.html { redirect_to @financial_request, notice: 'Financial Request was successfully updated.' }
-        format.json { render :show, status: :updated, location: @financial_request }
-      else
-        format.html { render :edit }
-        format.json { render json: @financial_request.errors, status: :unprocessable_entity }
-      end
+    if @financial_request.update(financial_request_params)
+      redirect_to @financial_request, notice: 'Financial Request was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def destroy
     @financial_request.destroy
-    respond_to do |format|
-      format.html { redirect_to financial_requests_url, notice: 'Financial Request was successfully destroyed' }
-      format.json { head :no_content }
-    end
+    redirect_to financial_requests_url, notice: 'Financial Request was successfully destroyed'
   end
 
   private

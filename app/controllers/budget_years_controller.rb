@@ -18,35 +18,24 @@ class BudgetYearsController < ApplicationController
   def create
     @budget_year = BudgetYear.new(budget_year_params)
 
-    respond_to do |format|
-      if @budget_year.save
-        format.html { redirect_to @budget_year, notice: 'Budget year was successfully created.' }
-        format.json { render :show, status: :created, location: @budget_year }
-      else
-        format.html { render :new }
-        format.json { render json: @budget_year.errors, status: :unprocessable_entity }
-      end
+    if @budget_year.save
+      redirect_to @budget_year, notice: 'Budget year was successfully created.'
+    else
+      render :new
     end
   end
 
   def update
-    respond_to do |format|
-      if @budget_year.update(budget_year_params)
-        format.html { redirect_to @budget_year, notice: 'Budget year was successfully updated.' }
-        format.json { render :show, status: :updated, location: @budget_year }
-      else
-        format.html { render :edit }
-        format.json { render json: @budget_year.errors, status: :unprocessable_entity }
-      end
+    if @budget_year.update(budget_year_params)
+      redirect_to @budget_year, notice: 'Budget year was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def destroy
-   @budget_year.destroy
-    respond_to do |format|
-      format.html { redirect_to budget_years_url, notice: 'Budget year  was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    @budget_year.destroy
+    redirect_to budget_years_url, notice: 'Budget year  was successfully destroyed.'
   end
 
   private

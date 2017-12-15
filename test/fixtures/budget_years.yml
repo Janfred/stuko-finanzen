@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  budget: 1
-  additional_budget: 1
+  budget_cents: 100
+  additional_budget_cents: 100
 
 two:
   name: MyString
-  budget: 1
-  additional_budget: 1
+  budget_cents: 100
+  additional_budget_cents: 100

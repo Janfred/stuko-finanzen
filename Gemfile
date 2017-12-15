@@ -74,3 +74,12 @@ gem 'twitter-bootstrap-rails'
 gem 'money-rails'
 
 gem 'cancancan'
+
+group :development do
+  gem 'better_errors'
+end
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+end

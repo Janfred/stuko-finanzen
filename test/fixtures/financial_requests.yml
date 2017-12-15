@@ -3,7 +3,7 @@
 one:
   name: MyString
   applicant: MyString
-  requested_sum: 1
+  requested_sum_cents: 100
   date: 2017-12-09
   done: false
   agenda_item: MyString
@@ -11,7 +11,7 @@ one:
 two:
   name: MyString
   applicant: MyString
-  requested_sum: 1
+  requested_sum_cents: 100
   date: 2017-12-09
   done: false
   agenda_item: MyString

@@ -72,3 +72,5 @@ gem 'omniauth-shibboleth'
 gem 'twitter-bootstrap-rails'
 
 gem 'money-rails'
+
+gem 'cancancan'

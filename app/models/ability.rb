@@ -28,5 +28,17 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
+    if user.role == "admin"
+      can :manage, :all
+    elsif user.role = "financial_administration"
+      can :read, :all
+      cannot :read, User
+      can :manage, Booking
+    else
+      can :read, BudgetYear
+      can :read, FinancialRequest
+      can :read, Meeting
+    end
+
   end
 end

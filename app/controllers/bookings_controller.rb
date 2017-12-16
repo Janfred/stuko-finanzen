@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   def index
     @bookings = Booking.all

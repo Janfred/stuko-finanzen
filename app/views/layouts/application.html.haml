@@ -31,7 +31,10 @@
             %li= link_to "Budget years", budget_years_path
             %li= link_to "Meetings", meetings_path
             %li= link_to "Financial Requests", financial_requests_path
-            %li= link_to "Bookings", bookings_path
+            - if can? :read, Booking
+              %li= link_to "Bookings", bookings_path
+            - if can? :read, User
+              %li= link_to "Users", users_path
 
     .container
       .row

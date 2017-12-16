@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :meetings
   resources :financial_requests
   resources :bookings
+  resources :users, except: [:new, :create]
 
   root "budget_years#index"
 end

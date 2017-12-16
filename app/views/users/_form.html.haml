@@ -1,0 +1,15 @@
+= form_for @user, html: { class: "form form-horizontal user" } do |f|
+  .form-group
+    = f.label :uid, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :uid, class: 'form-control', required: true, readonly: true
+    = f.error_span(:uid)
+  .form-group
+    = f.label :role, class: 'control-label col-lg-2'
+    .col-lg-10
+      = f.text_field :role, class: 'form-control', required: true
+    = f.error_span(:role)
+  .form-group
+    .col-lg-offset-2.col-lg-10
+      = f.submit nil,class: 'btn btn-primary'
+      = link_to t('.cancel', :default => t("helpers.links.cancel")), users_path, :class => 'btn btn-default'

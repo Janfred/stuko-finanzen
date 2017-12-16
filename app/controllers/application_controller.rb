@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
   private
 
   def development_sign_in
-    sign_in User.first
+    sign_in User.first if Rails.env.development?
   end
 end

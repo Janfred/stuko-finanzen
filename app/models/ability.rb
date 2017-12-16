@@ -30,7 +30,7 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
     if user.role == "admin"
       can :manage, :all
-    elsif user.role = "financial_administration"
+    elsif user.role == "financial_administration"
       can :read, :all
       cannot :read, User
       can :manage, Booking

@@ -27,5 +27,6 @@ end
 
 Then("I should be redirected") do
   # TODO check for redirect instead of path
+  puts local_variables.inspect
   assert page.current_path == "/"
 end

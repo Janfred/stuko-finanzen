@@ -19,16 +19,19 @@ Feature: Authorization
     | admin@uni-bremen.de   | /bookings          | /bookings          |
     | some@uni-bremen.de    | /bookings          | /bookings          |
     | another@uni-bremen.de | /bookings          | /                  |
+    | admin@uni-bremen.de   | /bookings/new      | /bookings/new      |
+    | some@uni-bremen.de    | /bookings/new      | /bookings/new      |
+    | another@uni-bremen.de | /bookings/new      | /                  |
     | admin@uni-bremen.de   | /meetings          | /meetings          |
     | some@uni-bremen.de    | /meetings          | /meetings          |
     | another@uni-bremen.de | /meetings          | /meetings          |
     | admin@uni-bremen.de   | /meetings/new      | /meetings/new      |
-    | some@uni-bremen.de    | /meetings/new      | /                  |
-    | another@uni-bremen.de | /meetings/new      | /                  |
+    | some@uni-bremen.de    | /meetings/new      | /meetings          |
+    | another@uni-bremen.de | /meetings/new      | /meetings          |
     | admin@uni-bremen.de   | /budget_years      | /budget_years      |
     | some@uni-bremen.de    | /budget_years      | /budget_years      |
     | another@uni-bremen.de | /budget_years      | /budget_years      |
     | admin@uni-bremen.de   | /budget_years/new  | /budget_years/new  |
-    | some@uni-bremen.de    | /budget_years/new  | /                  |
-    | another@uni-bremen.de | /budget_years/new  | /                  |
+    | some@uni-bremen.de    | /budget_years/new  | /budget_years      |
+    | another@uni-bremen.de | /budget_years/new  | /budget_years      |
 

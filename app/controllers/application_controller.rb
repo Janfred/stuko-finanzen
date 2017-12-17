@@ -3,7 +3,11 @@ class ApplicationController < ActionController::Base
   before_action :development_sign_in
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, :alert => exception.message
+    if can? :read, exception.subject
+      redirect_to exception.subject, :alert => exception.message
+    else
+      redirect_to root_url, :alert => exception.message
+    end
   end
 
   private

@@ -13,7 +13,32 @@ class FinancialRequest < ApplicationRecord
     return requested_sum - called_sum
   end
 
+  def to_select_string
+    name+" ("+applicant+")"
+  end
+
   def self.remaining_sum
     FinancialRequest.all.map{|f| f.open_sum }.inject(0, :+)
+  end
+
+  def self.option_group_for_select
+    option_group_helper(FinancialRequest.all)
+  end
+
+  def self.option_group_for_select_only_undone
+    option_group_helper(FinancialRequest.where(done: false))
+  end
+
+  private
+
+  def self.option_group_helper(list)
+    @data = Hash.new
+    list.each do |f|
+      meeting = "Ohne StuKo"
+      meeting = f.meeting.date unless f.meeting.nil?
+      @data[meeting] ||= Array.new
+      @data[meeting] << [f.to_select_string, f.id]
+    end
+    @data
   end
 end

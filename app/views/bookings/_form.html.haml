@@ -22,7 +22,7 @@
   .form-group
     = f.label :financial_request_id, class: 'control-label col-lg-2'
     .col-lg-10
-      = f.select :financial_request_id, options_for_select(FinancialRequest.all.map{|f|[f.name + " " + f.applicant, f.id]}, @booking.financial_request_id), {include_blank: true}, {class: 'chosen-select form-control'}
+      = f.select :financial_request_id, grouped_options_for_select(FinancialRequest.option_group_for_select_only_undone, @booking.financial_request_id), {include_blank: true}, {class: 'chosen-select form-control'}
     = f.error_span(:financial_request_id)
   .form-group
     .col-lg-offset-2.col-lg-10

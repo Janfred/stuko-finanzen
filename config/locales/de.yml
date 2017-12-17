@@ -1,0 +1,70 @@
+de:
+  activerecord:
+    attributes:
+      financial_request:
+        agenda_item: "TOP"
+        applicant: "Antragsteller"
+        requested_sum: "Beantragte Summe"
+        called_sum: "Abgerufene Summe"
+        open_sum: "Offene Summe"
+        meeting_id: "Sitzung"
+        done: "Abgeschlossen"
+        date: "Datum"
+      budget_year:
+        name: "Name"
+        budget: "Budget"
+        additional_budget: "Zusätzliches Budget"
+        called_budget: "Abgerufenes Budget"
+        remaining_budget: "Verbleibendes Budget"
+      meeting:
+        date: "Datum"
+        budget_year_id: "Haushaltsjahr"
+      booking:
+        amount: "Betrag"
+        comment: "Kommentar"
+        date: "Datum"
+        budget_year_id: "Haushaltsjahr"
+        financial_request_id: "Finanzantrag"
+      user:
+        role: "Rolle"
+    models:
+      financial_request:
+        one: "Finanzantrag"
+        other: "Finanzanträge"
+  financial_requests:
+    index:
+      title: "Finanzanträge"
+    new:
+      title: "Neuer Finanzantrag"
+    edit:
+      title: "Finanzantrag editieren"
+  bookings:
+    index:
+      title: "Buchungen"
+    new:
+      title: "Neue Buchung"
+    edit:
+      title: "Buchung editieren"
+  meetings:
+    index:
+      title: "Sitzungen"
+    new:
+      title: "Neue Sitzung"
+    edit:
+      title: "Sitzung editieren"
+  users:
+    index:
+      title: "Benutzer"
+  budget_years:
+    index:
+      title: "Haushaltsjahre"
+    new:
+      title: "Neues Haushaltsjahr"
+    edit:
+      title: "Haushaltsjahr editieren"
+  helpers:
+    links:
+      new: "Neu"
+      show: "Anzeigen"
+      edit: "Editieren"
+      destroy: "Löschen"

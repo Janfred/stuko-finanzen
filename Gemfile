@@ -56,6 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #======== CUSTOM GEMS ==========
 
+gem 'rails-i18n', '~> 5.0.0'
 
 gem 'mysql2'
 

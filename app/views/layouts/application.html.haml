@@ -28,13 +28,13 @@
         %a.navbar-brand(href="#") StukoFinanzen
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
-            %li= link_to "Budget years", budget_years_path
-            %li= link_to "Meetings", meetings_path
-            %li= link_to "Financial Requests", financial_requests_path
+            %li= link_to t('budget_years.index.title'), budget_years_path
+            %li= link_to t('meetings.index.title'), meetings_path
+            %li= link_to t('financial_requests.index.title'), financial_requests_path
             - if can? :read, Booking
-              %li= link_to "Bookings", bookings_path
+              %li= link_to t('bookings.index.title'), bookings_path
             - if can? :read, User
-              %li= link_to "Users", users_path
+              %li= link_to t('users.index.title'), users_path
 
     .container
       .row

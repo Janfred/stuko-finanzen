@@ -22,3 +22,6 @@ vendor/bundle
 .byebug_history
 
 /coverage
+
+# Vim swap files
+.*.swp

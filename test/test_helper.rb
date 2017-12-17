@@ -1,6 +1,6 @@
 ENV['RAILS_ENV'] ||= 'test'
 require 'simplecov'
-if ENV['CODACY_PROJECT_TOKEN'] then
+if ENV['CODACY_PROJECT_TOKEN']
   require 'codacy-coverage'
   Codacy::Reporter.start
 end

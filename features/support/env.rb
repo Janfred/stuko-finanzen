@@ -4,7 +4,7 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 require 'simplecov'
-if ENV['CODACY_PROJECT_TOKEN'] then
+if ENV['CODACY_PROJECT_TOKEN']
   require 'codacy-coverage'
   Codacy::Reporter.start
 end

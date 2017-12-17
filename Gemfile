@@ -75,6 +75,8 @@ gem 'money-rails'
 
 gem 'cancancan'
 
+gem 'chosen-rails'
+
 group :development do
   gem 'better_errors'
 end

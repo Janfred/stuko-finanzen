@@ -58,6 +58,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chosen-rails (1.5.2)
+      coffee-rails (>= 3.2)
+      railties (>= 3.0)
+      sass-rails (>= 3.2)
     codacy-coverage (1.1.8)
       simplecov
     coderay (1.1.2)
@@ -299,6 +303,7 @@ DEPENDENCIES
   better_errors
   byebug
   cancancan
+  chosen-rails
   codacy-coverage
   coffee-rails (~> 4.2)
   cucumber-rails

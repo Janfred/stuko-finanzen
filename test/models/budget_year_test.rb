@@ -17,4 +17,9 @@ class BudgetYearTest < ActiveSupport::TestCase
     budget_year.additional_budget = 0
     assert budget_year.save, "Could not save valid budget year."
   end
+
+  # TODO:
+  # * check blocked sum
+  # * check called sum
+  # * check available sum
 end

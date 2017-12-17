@@ -58,6 +58,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    codacy-coverage (1.1.8)
+      simplecov
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -297,6 +299,7 @@ DEPENDENCIES
   better_errors
   byebug
   cancancan
+  codacy-coverage
   coffee-rails (~> 4.2)
   cucumber-rails
   database_cleaner

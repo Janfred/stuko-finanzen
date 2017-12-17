@@ -83,4 +83,5 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'simplecov', :require => false
+  gem 'codacy-coverage', :require => false
 end

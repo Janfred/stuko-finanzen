@@ -4,6 +4,10 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 require 'simplecov'
+if ENV['CODACY_PROJECT_TOKEN'] then
+  require 'codacy-coverage'
+  Codacy::Reporter.start
+end
 SimpleCov.start
 
 require 'cucumber/rails'

@@ -23,22 +23,24 @@ end
 Given("the budget year {string} exists and has a budget of {float} and an additional budget of {float}") do |budget_year_name, budget, additional_budget|
   params = {name: budget_year_name, budget: budget, additional_budget: additional_budget}
   params[:id] = 1 if BudgetYear.where(id: 1).empty?
-  b = BudgetYear.create!(params)
+  BudgetYear.create!(params)
 end
 
 Given("the meeting {string} exists and belongs to budget year {string}") do |meeting_date, budget_year_name|
   b = BudgetYear.where(name: budget_year_name)
   return false if b.length !=1
   b = b.first
+
   params = {date: meeting_date, budget_year: b}
   params[:id] = 1 if Meeting.where(id: 1).empty?
-  m = Meeting.create!(params)
+  Meeting.create!(params)
 end
 
 Given("the financial request {string} of applicant {string} exists, has an amount of {float} and belongs to meeting {string}") do |financial_request_name, financial_request_applicant, financial_request_amount, meeting_date|
   m = Meeting.where(date: meeting_date)
   return false if m.length != 1
   m = m.first
+
   params = {name: financial_request_name, applicant: financial_request_applicant, requested_sum: financial_request_amount, meeting: m}
   params[:id] = 1 if FinancialRequest.where(id: 1).empty?
   FinancialRequest.create!(params)

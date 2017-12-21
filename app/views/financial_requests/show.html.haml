@@ -33,5 +33,7 @@
 
 
 = link_to t('.back', :default => t("helpers.links.back")), financial_requests_path, :class => 'btn btn-default'
-= link_to t('.edit', :default => t("helpers.links.edit")), edit_financial_request_path(@financial_request), :class => 'btn btn-default'
-= link_to t('.destroy', :default => t("helpers.links.destroy")), financial_request_path(@financial_request), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
+- if can?(:edit, @financial_request)
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_financial_request_path(@financial_request), :class => 'btn btn-default'
+- if can?(:destroy, @financial_request)
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), financial_request_path(@financial_request), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

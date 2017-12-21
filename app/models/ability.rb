@@ -30,7 +30,7 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
     if user.role == "admin"
       can :manage, :all
-      cannot :delete, User, id: user.id
+      cannot :destroy, User, id: user.id
     elsif user.role == "financial_administration"
       can :read, :all
       cannot :read, User

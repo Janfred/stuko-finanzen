@@ -17,17 +17,17 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:edit, user)
   end
 
-  test "admin should be able to delete users" do
+  test "admin should be able to destroy users" do
     user = User.create!({uid: "admin@uni-bremen.de", role: "admin"})
     user2 = User.create!({uid: "other@uni-bremen.de"})
     ability = Ability.new(user)
-    assert ability.can?(:delete, user2)
+    assert ability.can?(:destroy, user2)
   end
 
-  test "admin should not be able to delete himself" do
+  test "admin should not be able to destroy himself" do
     user = User.create!({uid: "admin@uni-bremen.de", role: "admin"})
     ability = Ability.new(user)
-    assert ability.cannot?(:delete, user)
+    assert ability.cannot?(:destroy, user)
   end
 
   test "admin should be able to view bookings" do

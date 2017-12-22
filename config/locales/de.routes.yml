@@ -1,0 +1,30 @@
+de:
+  routes:
+    controllers:
+      bookings:
+        bookings: buchungen
+        new: neu
+        edit: bearbeiten
+      budget_years:
+        budget_years: haushaltsjahre
+        new: neu
+        edit: bearbeiten
+      financial_requests:
+        financial_requests: finanzantraege
+        new: new
+        edit: bearbeiten
+      meetings:
+        meetings: sitzungen
+        new: neu
+        edit: bearbeiten
+      users:
+        users: benutzer
+        edit: bearbeiten
+    bookings: buchungen
+    budget_years: haushaltsjahre
+    financial_requests: finanzantraege
+    meetings: sitzungen
+    users: benutzer
+    new: neu
+    edit: bearbeiten
+    show: anzeigen

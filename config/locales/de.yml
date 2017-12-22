@@ -31,6 +31,9 @@ de:
       financial_request:
         one: "Finanzantrag"
         other: "Finanzanträge"
+      budget_year:
+        one: "Haushaltsjahr"
+        other: "Haushaltsjahre"
   financial_requests:
     index:
       title: "Finanzanträge"

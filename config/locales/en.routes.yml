@@ -1,0 +1,30 @@
+en:
+  routes:
+    controllers:
+      bookings:
+        bookings: bookings
+        new: new
+        edit: edit
+      budget_years:
+        budget_years: budget_years
+        new: new
+        edit: edit
+      financial_requests:
+        financial_requests: financial_requests
+        new: new
+        edit: edit
+      meetings:
+        meetings: meetings
+        new: new
+        edit: edit
+      users:
+        users: users
+        edit: edit
+    bookings: bookings
+    budget_years: budget_years
+    financial_requests: financial_requests
+    meetings: meetings
+    users: users
+    new: new
+    edit: edit
+    show: show

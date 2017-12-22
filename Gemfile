@@ -88,3 +88,5 @@ group :test do
   gem 'simplecov', :require => false
   gem 'codacy-coverage', :require => false
 end
+
+gem 'route_translator'

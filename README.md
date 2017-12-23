@@ -6,6 +6,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/dcf88484e076930a4543/maintainability)](https://codeclimate.com/github/Janfred/stuko-finanzen/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/dcf88484e076930a4543/test_coverage)](https://codeclimate.com/github/Janfred/stuko-finanzen/test_coverage)
 [![Build Status](https://travis-ci.org/Janfred/stuko-finanzen.svg?branch=master)](https://travis-ci.org/Janfred/stuko-finanzen)
+[![security](https://hakiri.io/github/Janfred/stuko-finanzen/master.svg)](https://hakiri.io/github/Janfred/stuko-finanzen/master)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

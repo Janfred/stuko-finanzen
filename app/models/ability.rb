@@ -28,7 +28,9 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-    if user.role == "admin"
+    if user.nil?
+      cannot :manage, :all
+    elsif user.role == "admin"
       can :manage, :all
       cannot :destroy, User, id: user.id
     elsif user.role == "financial_administration"

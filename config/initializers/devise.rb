@@ -252,12 +252,12 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :shibboleth, {
-    :uid_field => "REDIRECT_eppn",
-    :shib_session_id_field => "REDIRECT_Shib_Session_ID",
-    :shib_application_id_field => "REDIRECT_Shib_Application_ID",
+    :uid_field => "HTTP_EPPN",
+    :shib_session_id_field => "HTTP_SHIB_SESSION_ID",
+    :shib_application_id_field => "HTTP_SHIB_APPLICATION_ID",
     :info_fields => {
-      :email => "REDIRECT_eppn",
-      :entitlement => "REDIRECT_entitlement"
+      :email => "HTTP_EPPN",
+      :entitlement => "HTTP_ENTITLEMENT"
     }
   }
 

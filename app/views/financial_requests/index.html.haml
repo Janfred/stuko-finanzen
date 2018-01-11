@@ -26,7 +26,7 @@
         %td= financial_request.called_sum
         %td= financial_request.open_sum
         %td= financial_request.date
-        %td= financial_request.done
+        %td= ( financial_request.done ? fa_icon("check") : fa_icon("times") )
         %td= financial_request.agenda_item
         %td= ( financial_request.meeting ? financial_request.meeting.date : "-" )
         %td=l financial_request.created_at

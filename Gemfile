@@ -78,6 +78,8 @@ gem 'cancancan'
 
 gem 'chosen-rails'
 
+gem 'font-awesome-rails'
+
 group :development do
   gem 'better_errors'
 end

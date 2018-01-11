@@ -33,6 +33,9 @@ class Ability
     elsif user.role == "admin"
       can :manage, :all
       cannot :destroy, User, id: user.id
+    elsif user.role == "stugenbeauftragter"
+      can :manage, :all
+      cannot :manage, User
     elsif user.role == "financial_administration"
       can :read, :all
       cannot :read, User

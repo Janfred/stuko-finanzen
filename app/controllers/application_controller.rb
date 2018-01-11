@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :development_sign_in
+#  before_action :development_sign_in
 
   rescue_from CanCan::AccessDenied do |exception|
     if can? :read, exception.subject

@@ -17,24 +17,24 @@ Feature: Authorization
 
     Examples:
     | logged_in_user        | path                       | final_path                 |
-    | admin@uni-bremen.de   | /                          | /                          |
-    | some@uni-bremen.de    | /                          | /                          |
-    | another@uni-bremen.de | /                          | /                          |
+    | admin@uni-bremen.de   | /                          | /budget_years              |
+    | some@uni-bremen.de    | /                          | /budget_years              |
+    | another@uni-bremen.de | /                          | /budget_years              |
     | admin@uni-bremen.de   | /users                     | /users                     |
-    | some@uni-bremen.de    | /users                     | /                          |
-    | another@uni-bremen.de | /users                     | /                          |
+    | some@uni-bremen.de    | /users                     | /budget_years              |
+    | another@uni-bremen.de | /users                     | /budget_years              |
     | admin@uni-bremen.de   | /users/1                   | /users/1                   |
-    | some@uni-bremen.de    | /users/1                   | /                          |
-    | another@uni-bremen.de | /users/1                   | /                          |
+    | some@uni-bremen.de    | /users/1                   | /budget_years              |
+    | another@uni-bremen.de | /users/1                   | /budget_years              |
     | admin@uni-bremen.de   | /users/1/edit              | /users/1/edit              |
-    | some@uni-bremen.de    | /users/1/edit              | /                          |
-    | another@uni-bremen.de | /users/1/edit              | /                          |
+    | some@uni-bremen.de    | /users/1/edit              | /budget_years              |
+    | another@uni-bremen.de | /users/1/edit              | /budget_years              |
     | admin@uni-bremen.de   | /bookings                  | /bookings                  |
     | some@uni-bremen.de    | /bookings                  | /bookings                  |
-    | another@uni-bremen.de | /bookings                  | /                          |
+    | another@uni-bremen.de | /bookings                  | /budget_years              |
     | admin@uni-bremen.de   | /bookings/new              | /bookings/new              |
     | some@uni-bremen.de    | /bookings/new              | /bookings/new              |
-    | another@uni-bremen.de | /bookings/new              | /                          |
+    | another@uni-bremen.de | /bookings/new              | /budget_years              |
     | admin@uni-bremen.de   | /meetings                  | /meetings                  |
     | some@uni-bremen.de    | /meetings                  | /meetings                  |
     | another@uni-bremen.de | /meetings                  | /meetings                  |

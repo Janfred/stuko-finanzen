@@ -21,4 +21,4 @@ Feature: Bookings
   Scenario: Index of unauthorized user
     Given the user "another@uni-bremen.de" is logged in
     When I visit "/bookings"
-    Then I should be at path "/"
+    Then I should be at path "/budget_years"

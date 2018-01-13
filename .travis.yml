@@ -4,6 +4,7 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+  - cp config/database.yml.travis config/database.yml
 script:
   - bundle exec rails test
   - bundle exec rake cucumber

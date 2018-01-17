@@ -14,7 +14,6 @@
       %th= model_class.human_attribute_name(:done)
       %th= model_class.human_attribute_name(:agenda_item)
       %th= model_class.human_attribute_name(:meeting_id)
-      %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @financial_requests.each do |financial_request|
@@ -29,7 +28,6 @@
         %td= ( financial_request.done ? fa_icon("check") : fa_icon("times") )
         %td= financial_request.agenda_item
         %td= ( financial_request.meeting ? financial_request.meeting.date : "-" )
-        %td=l financial_request.created_at
         %td
           = link_to t('.show', :default => t("helpers.links.show")), financial_request_path(financial_request), :class => 'btn btn-default btn-xs'
           - if can?(:edit, financial_request)

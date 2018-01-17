@@ -7,6 +7,11 @@ class FinancialRequestsController < ApplicationController
     @financial_requests = FinancialRequest.all
   end
 
+  def not_called
+    @financial_requests = FinancialRequest.where(done: false)
+    render 'index'
+  end
+
   def show
   end
 

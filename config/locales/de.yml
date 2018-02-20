@@ -37,6 +37,8 @@ de:
   financial_requests:
     index:
       title: "Finanzanträge"
+      not_called: "Nicht aberufene Anträge"
+      all: "Alle Anträge"
     new:
       title: "Neuer Finanzantrag"
     edit:

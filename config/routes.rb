@@ -8,7 +8,6 @@ Rails.application.routes.draw do
         get :not_called
       end
     end
-    get 'not_called', to: 'financial_requests#not_called'
     resources :bookings
     resources :users, except: [:new, :create]
   end

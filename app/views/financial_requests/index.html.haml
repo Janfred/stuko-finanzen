@@ -1,6 +1,10 @@
 - model_class = FinancialRequest
 .page-header
   %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+  - if action_name == "not_called"
+    = link_to t('.not_called'), not_called_financial_requests_path, class: "btn btn-default"
+  - else
+    = link_to t('.all'), financial_requests_path, class: "btn btn-default"
 %table.table.table-striped
   %thead
     %tr

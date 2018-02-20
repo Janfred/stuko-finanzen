@@ -40,9 +40,11 @@ class Ability
       can :read, :all
       cannot :read, User
       can :manage, Booking
+      can :not_called, FinancialRequest
     else
       can :read, BudgetYear
       can :read, FinancialRequest
+      can :not_called, FinancialRequest
       can :read, Meeting
     end
 

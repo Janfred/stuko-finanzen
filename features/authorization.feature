@@ -65,5 +65,8 @@ Feature: Authorization
     | admin@uni-bremen.de   | /financial_requests/1/edit | /financial_requests/1/edit |
     | some@uni-bremen.de    | /financial_requests/1/edit | /financial_requests/1      |
     | another@uni-bremen.de | /financial_requests/1/edit | /financial_requests/1      |
+    | admin@uni-bremen.de   | /financial_requests/not_called | /financial_requests/not_called |
+    | some@uni-bremen.de    | /financial_requests/not_called | /financial_requests/not_called |
+    | another@uni-bremen.de | /financial_requests/not_called | /financial_requests/not_called |
 
 

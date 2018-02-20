@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   localized do
     resources :budget_years
     resources :meetings
-    resources :financial_requests
+    resources :financial_requests do
+      collection do
+        get :not_called
+      end
+    end
     get 'not_called', to: 'financial_requests#not_called'
     resources :bookings
     resources :users, except: [:new, :create]

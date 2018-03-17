@@ -1,6 +1,11 @@
 - model_class = BudgetYear
 .page-header
   %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+
+.alert.alert-info
+  Summe der blockierten Gelder:
+  = FinancialRequest.remaining_sum
+
 %table.table.table-striped
   %thead
     %tr

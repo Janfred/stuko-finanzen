@@ -224,9 +224,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    rails-i18n (5.0.4)
-      i18n (~> 0.7)
-      railties (~> 5.0)
+    rails-i18n (5.1.1)
+      i18n (>= 0.7, < 2)
+      railties (>= 5.0, < 6)
     railties (5.1.6)
       actionpack (= 5.1.6)
       activesupport (= 5.1.6)
@@ -330,7 +330,7 @@ DEPENDENCIES
   omniauth-shibboleth
   puma (~> 3.0)
   rails (~> 5.1)
-  rails-i18n (~> 5.0.0)
+  rails-i18n (~> 5.1.1)
   route_translator
   sass-rails (~> 5.0)
   simplecov

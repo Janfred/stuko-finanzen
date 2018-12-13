@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.all.order(:date)
   end
 
   def show

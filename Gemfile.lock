@@ -164,10 +164,9 @@ GEM
       less (~> 2.6.0)
       sprockets (> 2, < 4)
       tilt
-    listen (3.1.5)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-      ruby_dep (~> 1.2)
+    listen (3.2.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -253,7 +252,6 @@ GEM
     route_translator (7.0.0)
       actionpack (>= 5.0.0.1, < 6.1)
       activesupport (>= 5.0.0.1, < 6.1)
-    ruby_dep (1.5.0)
     ruby_parser (3.13.1)
       sexp_processor (~> 4.9)
     sass-rails (6.0.0)
@@ -331,7 +329,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
-  listen (~> 3.1.0)
+  listen (~> 3.2.0)
   mediawiki_api
   money-rails
   mysql2

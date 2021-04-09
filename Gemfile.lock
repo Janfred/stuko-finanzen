@@ -144,7 +144,7 @@ GEM
       http-cookie (~> 1.0.0)
     faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.14.2)
+    ffi (1.15.0)
     font-awesome-rails (4.7.0.6)
       railties (>= 3.2, < 6.2)
     globalid (0.4.2)
@@ -181,7 +181,7 @@ GEM
       less (~> 2.6.0)
       sprockets (> 2, < 4)
       tilt
-    listen (3.4.1)
+    listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.9.1)
@@ -355,7 +355,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
-  listen (~> 3.4.0)
+  listen (~> 3.5.1)
   mediawiki_api
   money-rails
   mysql2
